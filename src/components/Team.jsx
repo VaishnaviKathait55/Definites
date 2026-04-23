@@ -45,11 +45,11 @@ const Team = () => {
             <span>MS</span>
           </div>
           <div className="founder-details">
-            <span className="founder-role">Managing Head</span>
+            <span className="founder-role">Senior Advisor</span>
             <h3>M.K. Srivastava</h3>
             <p className="founder-credentials">Retd. Chief Commissioner, CBIC, Customs & GST</p>
             <p className="founder-bio">
-              Directing the firm's strategic vision with decades of insider regulatory experience, ensuring every client strategy is bulletproof.
+              Senior Advisor, former IRS officer with 30+ years of expertise in indirect taxation and advisory services.
             </p>
           </div>
         </div>
