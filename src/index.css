@@ -1,0 +1,1241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Your New FinTech/Elite Color Palette */
+  --color-primary: #184E44; /* The deep, trustworthy teal/green */
+  --color-primary-light: #2A6A5E; /* A slightly lighter teal for hover effects */
+  --color-mint: #E8F3EF; /* The soft, pale green for backgrounds and cards */
+  --color-white: #FFFFFF;
+  
+  /* Text Colors */
+  --text-main: #0F172A; /* Deep charcoal for headings (looks better than pure black) */
+  --text-muted: #475569; /* Smooth gray for paragraphs */
+  
+  /* Utilities */
+  --font-main: 'Inter', sans-serif;
+  --transition-smooth: all 0.3s ease-in-out;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--text-main);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-white);
+}
+
+/* Typography Utility */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Modern Pill Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+/* Soft Mint Card */
+.mint-card {
+  background-color: var(--color-mint);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: var(--transition-smooth);
+}
+
+.mint-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(24, 78, 68, 0.1);
+}
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-brand h2 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem; /* Tighter gap to fit all 7 text links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem; /* Sleeker, slightly smaller font for the dashboard vibe */
+  transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* --- HERO STYLES --- */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 5%;
+  min-height: 85vh;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-mint);
+  color: var(--color-primary-light);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.text-highlight {
+  color: var(--color-primary);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  border: 2px solid var(--color-primary);
+  transition: var(--transition-smooth);
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-mint);
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(24, 78, 68, 0.1);
+}
+
+/* --- ENHANCED ABOUT SECTION STYLES --- */
+.about-section {
+  padding: 8rem 5%;
+  background-color: var(--color-mint);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Gives slightly more room to the text */
+  gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-visual-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about-visual-side h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-top: 1rem;
+}
+
+/* The FinTech Trust Badge */
+.founder-badge {
+  background-color: var(--color-white);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+  box-shadow: 0 10px 30px rgba(24, 78, 68, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.founder-title {
+  display: block;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.founder-cred {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.seal {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-mint);
+  border-radius: 50%;
+  border: 2px solid var(--color-primary-light);
+}
+
+/* Right Side Text & Grid */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lead-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-primary); /* Changed to Teal for more impact */
+  line-height: 1.6;
+}
+
+/* The Value Grid (Removes the blank feeling) */
+.about-value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(24, 78, 68, 0.1);
+}
+
+.value-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-value-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .about-value-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+/* --- UPDATED SERVICES STYLES (6 CARDS) --- */
+.services-section {
+  padding: 6rem 5% 3rem 5%; /* Reduced the bottom padding from 6rem to 3rem */
+  background-color: var(--color-white);
+}
+
+.section-header.text-center {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+/* 3 Columns on Desktop */
+.services-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The New Dark Card Design */
+.dark-card {
+  background-color: var(--color-primary); /* Deep Teal/Green */
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dark-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-primary-light); /* Slightly lighter green on hover */
+  box-shadow: 0 20px 40px rgba(24, 78, 68, 0.3);
+}
+
+.card-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+/* List styles tailored for dark background */
+.dark-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto; /* Pushes the list down so short cards look balanced */
+}
+
+.dark-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  color: var(--color-mint); /* Softer white/mint for readability */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.dark-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-white); /* Pure white arrow */
+  font-weight: 700;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .services-grid-6 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid-6 {
+    grid-template-columns: 1fr; /* 1 column on phones */
+  }
+}
+
+/* --- UPDATED WHY CHOOSE US STYLES --- */
+.wcu-section {
+  padding: 3rem 5% 4rem 5%; /* Reduced bottom padding from 8rem to 4rem */
+  background-color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.wcu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The Premium Mint Card (Permanent Background) */
+.wcu-card {
+  position: relative;
+  background-color: var(--color-mint); /* Permanently set to the About section background */
+  border: 1px solid rgba(24, 78, 68, 0.05); /* Softer border to match the mint */
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+/* Hover Effect: Lifts up with a shadow, but background stays Mint */
+.wcu-card:hover {
+  transform: translateY(-10px);
+  /* border-color: transparent; */
+  /* box-shadow: 0 20px 40px rgba(24, 78, 68, 0.12); Darker shadow to make the mint pop */
+}
+
+/* The Giant Watermark Number */
+.wcu-number {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--color-mint);
+  opacity: 0.2;
+  z-index: -1;
+  transition: var(--transition-smooth);
+}
+
+/* On hover, the number slides slightly and gets darker */
+.wcu-card:hover .wcu-number {
+  color: var(--color-primary);
+  opacity: 0.2;
+  transform: scale(1.1) translate(-10px, -10px);
+}
+
+.wcu-content h3 {
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.wcu-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Staggered Animation Logic */
+.fade-up-stagger {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-up-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .wcu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wcu-grid {
+    grid-template-columns: 1fr;
+  }
+  .wcu-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* --- EXPERTISE SECTION STYLES --- */
+.expertise-section {
+  padding: 2rem 5% 8rem 5%; /* Reduced top padding from 4rem to 2rem */
+  background-color: var(--color-white);
+}
+
+/* Update these two classes in the Expertise block */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch; /* CHANGED: This forces both columns to be equal height */
+}
+
+.expertise-advantage-card {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  box-shadow: 0 20px 40px rgba(24, 78, 68, 0.15);
+  display: flex; /* NEW: Added flex to center the text */
+  flex-direction: column;
+  justify-content: center; /* NEW: Keeps text vertically centered inside the massive card */
+  height: 100%; /* NEW: Ensures it fills the whole grid space */
+}
+
+.advantage-title {
+  color: var(--color-white);
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.advantage-text {
+  color: var(--color-mint);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.advantage-text:last-child {
+  margin-bottom: 0;
+}
+
+/* The Right Side: Competencies */
+.expertise-competencies .section-header {
+  text-align: left; /* Override the center alignment for this specific section */
+  margin-bottom: 3rem;
+}
+
+.expertise-competencies h3 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.competency-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.competency-item {
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(24, 78, 68, 0.1);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+/* Smooth hover effect that highlights the row */
+.competency-item::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.4s ease;
+}
+
+.competency-item:hover::after {
+  width: 100%;
+}
+
+.comp-icon {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  opacity: 0.5;
+  padding-top: 0.2rem;
+}
+
+.comp-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+}
+
+.competency-item:hover .comp-content h4 {
+  color: var(--color-primary);
+}
+
+.comp-content p {
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .expertise-advantage-card {
+    padding: 3rem 2rem;
+  }
+}
+
+/* --- KEY INSIGHTS SECTION STYLES --- */
+.insights-section {
+  padding: 6rem 5% 8rem 5%;
+  background-color: var(--color-mint); /* Alternate background to break up the white */
+}
+
+.insights-container {
+  max-width: 900px; /* Kept narrower for optimal reading width */
+  margin: 0 auto;
+}
+
+.insights-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.accordion-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* The Interactive Accordion Bar */
+.accordion-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(24, 78, 68, 0.05);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.accordion-item:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 10px 20px rgba(24, 78, 68, 0.05);
+}
+
+/* Header (Always Visible) */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.accordion-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.accordion-num {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  opacity: 0.6;
+}
+
+.accordion-title {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+}
+
+.accordion-item.active .accordion-title {
+  color: var(--color-primary);
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(90deg); /* Slight rotation effect when open */
+}
+
+/* Body (Hidden by default, expands when active) */
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* When the item is active, we give it enough max-height to reveal the text */
+.accordion-item.active .accordion-body {
+  max-height: 200px; 
+}
+
+.accordion-content {
+  padding: 0 2rem 1.5rem 4.7rem; /* Indented to align perfectly with the title */
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 1px solid transparent; /* Prevents margin collapse */
+}
+
+/* --- TESTIMONIALS SECTION STYLES --- */
+.testimonials-section {
+  padding: 8rem 5%;
+  background-color: var(--color-primary); /* Dark Teal Background for dramatic effect */
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Specific overrides for light text on dark background */
+.section-header.light-text h2 {
+  color: var(--color-white);
+  font-size: 2.8rem;
+  margin-top: 1rem;
+}
+
+.badge-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-mint);
+}
+
+/* The Carousel Stage */
+.carousel-stage {
+  margin-top: 4rem;
+  background-color: rgba(255, 255, 255, 0.03); /* Extremely subtle glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  position: relative;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-heading);
+  font-size: 10rem;
+  line-height: 1;
+  color: var(--color-mint);
+  opacity: 0.1;
+  z-index: 0;
+  user-select: none;
+}
+
+.quote-content-wrapper {
+  position: relative;
+  min-height: 250px; /* Keeps the stage from jumping as text length changes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* The Fade Animation Magic */
+.testimonial-slide {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+.testimonial-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+}
+
+.testimonial-author-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.author-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-mint);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.author-company {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* The Navigation Dots */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.dot.active {
+  background-color: var(--color-mint);
+  transform: scale(1.3);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .testimonial-text {
+    font-size: 1.2rem;
+  }
+  .carousel-stage {
+    padding: 3rem 1.5rem;
+  }
+  .quote-content-wrapper {
+    min-height: 350px; /* More height for mobile wrapping */
+  }
+}
+
+/* --- TEAM SECTION STYLES --- */
+.team-section {
+  padding: 8rem 5%;
+  background-color: var(--color-mint); /* Provides contrast against the dark Testimonials */
+}
+
+.team-container {
+  max-width: 1100px;
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Founder Spotlight Card */
+.founder-spotlight {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 10px 30px rgba(24, 78, 68, 0.05);
+  border: 1px solid rgba(24, 78, 68, 0.05);
+}
+
+.founder-avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(24, 78, 68, 0.2);
+}
+
+.founder-role {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.founder-details h3 {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.founder-credentials {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.founder-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Advocates Grid */
+.advocates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(24, 78, 68, 0.05);
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(24, 78, 68, 0.08);
+  border-color: var(--color-primary-light);
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-mint);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.team-card:hover .team-avatar {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.team-info h4 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.3rem;
+}
+
+.team-role {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.team-focus {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: var(--color-mint);
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+
+.focus-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* Responsive Overrides */
+@media (max-width: 960px) {
+  .advocates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .founder-spotlight {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .advocates-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- CONTACT & FOOTER SECTION STYLES --- */
+.contact-section {
+  background-color: var(--color-primary); /* Deep Teal to close the site */
+  color: var(--color-white);
+  padding-top: 8rem;
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5% 6rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+/* Left Side: Form */
+.contact-title {
+  color: var(--color-white);
+  font-size: 2.8rem;
+  margin: 1rem 0;
+}
+
+.contact-subtitle {
+  color: var(--color-mint);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: var(--color-mint);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: rgba(255, 255, 255, 0.05); /* Sleek transparent inputs */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-mint);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-submit {
+  background-color: var(--color-mint);
+  color: var(--color-primary);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md); /* Slightly squarer button for the form */
+}
+
+.form-submit:hover {
+  background-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Right Side: Contact Info */
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.info-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-mint);
+}
+
+.info-card h4 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.info-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.highlight-text {
+  font-size: 1.4rem;
+  color: var(--color-mint) !important;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  font-family: var(--font-heading);
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-mint);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.linkedin-link:hover {
+  color: var(--color-white);
+  transform: translateX(5px);
+}
+
+/* Bottom Copyright Bar */
+.copyright-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 5%;
+  background-color: rgba(0, 0, 0, 0.15); /* Slightly darker than the main footer */
+}
+
+.copyright-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-links a:hover {
+  color: var(--color-mint);
+}
+
+/* Responsive Overrides */
+@media (max-width: 960px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  .copyright-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
