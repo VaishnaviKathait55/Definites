@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const advocates = [
-  { name: "Rishabh Jain", role: "Advocate", focus: "Advance Rulings & Tax Planning" },
+  // { name: "Rishabh Jain", role: "Advocate", focus: "Advance Rulings & Tax Planning" },
   { name: "Abhishek Kathait", role: "Advocate", focus: "GST Litigation & Advisory" },
   { name: "Divya Sharma", role: "Advocate", focus: "Customs Valuation & Compliance" },
   { name: "Shubham Jain", role: "Advocate", focus: "Audit Defense & Anti-Evasion" },
