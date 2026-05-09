@@ -28,7 +28,7 @@ export async function ensureDefaultAdmin() {
     name: process.env.ADMIN_NAME?.trim() || 'Platform Administrator',
     email: adminEmail,
     phone: 'N/A',
-    organization: process.env.APP_NAME?.trim() || 'Definites Legal',
+    organization: process.env.APP_NAME?.trim() || 'Definites Consultants',
     role: 'admin',
     passwordHash,
     isActive: true,

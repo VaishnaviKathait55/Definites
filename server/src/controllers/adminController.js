@@ -8,9 +8,9 @@ import { generateTemporaryPassword } from '../utils/passwords.js';
 import { serializeAccessRequest, serializeUser } from '../utils/serializers.js';
 
 function buildApprovalEmail({ name, email, temporaryPassword }) {
-  const appName = process.env.APP_NAME || 'Definites Legal Practice Management';
-  const loginUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/login`;
-  const resetUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/reset-password`;
+  const appName = process.env.APP_NAME || 'Definites Portal';
+  const loginUrl = `${process.env.FRONTEND_URL || 'https://definites.vercel.app'}/login`;
+  const resetUrl = `${process.env.FRONTEND_URL || 'https://definites.vercel.app'}/change-password`;
 
   return {
     subject: `${appName}: your access has been approved`,
