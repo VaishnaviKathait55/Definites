@@ -2516,3 +2516,40 @@ p {
 .disclaimer-btn-accept:hover {
   background: #2A6A5E;
 }
+
+/* Query word count */
+.word-count {
+  display: block;
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+
+.word-count-limit {
+  color: #e53e3e;
+  font-weight: 600;
+}
+
+.request-query {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  background: #f5f9f7;
+  border-left: 3px solid #184E44;
+  border-radius: 0 6px 6px 0;
+}
+
+.request-query dt {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #184E44;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.request-query dd {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+}

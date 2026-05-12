@@ -28,7 +28,7 @@ const servicesData = [
     items: [
       "Resolution of port-level classification disputes",
       "Defense in DRI and SIIB investigations",
-      "Appellate representation before CESTAT",
+      "Appellate representation before CESTAT, Higher Courts",
       "Strategic defense at all departmental levels"
     ]
   },
