@@ -1110,6 +1110,13 @@ p {
   gap: 2rem;
 }
 
+.team-bio {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  justify-content: center;
+  align-items: center;
+}
+
 .team-card {
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -1171,7 +1178,7 @@ p {
   justify-content: center;
   gap: 0.4rem;
   background-color: var(--color-mint);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 50px;
 }
 
@@ -2552,4 +2559,73 @@ p {
   font-size: 0.9rem;
   color: #374151;
   line-height: 1.6;
+}
+
+/* ── Sidebar scrollbar hiding ─────────────────────────────── */
+aside::-webkit-scrollbar {
+  display: none;
+}
+ 
+/* ── Main content scrollbar ───────────────────────────────── */
+#main-content::-webkit-scrollbar {
+  width: 4px;
+}
+#main-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+}
+ 
+/* ── Nav item hover (supplement to onMouse* handlers) ────── */
+/* Ensures keyboard focus also shows the hover state */
+.cdp-nav-item:focus-visible {
+  outline: 2px solid #184E44;
+  outline-offset: -2px;
+}
+ 
+/* ── Doc row hover cursor ─────────────────────────────────── */
+.cdp-doc-row:hover {
+  background: #f0ede8;
+}
+ 
+/* ── Form input focus ring ────────────────────────────────── */
+.cdp-input:focus {
+  border-color: #184E44 !important;
+  outline: none;
+}
+ 
+/* ── Dropzone hover ───────────────────────────────────────── */
+.cdp-dropzone:hover {
+  border-color: #184E44 !important;
+  background: #e6f4f0 !important;
+}
+ 
+/* ── Doc type button hover ────────────────────────────────── */
+.cdp-doc-type-btn:hover {
+  border-color: #184E44 !important;
+  background: #e6f4f0 !important;
+}
+ 
+/* ── Entry animations ─────────────────────────────────────── */
+@keyframes cdpFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* Stat cards staggered reveal */
+.cdp-stat-card {
+  animation: cdpFadeUp 0.3s ease both;
+}
+.cdp-stat-card:nth-child(1) { animation-delay: 0.05s; }
+.cdp-stat-card:nth-child(2) { animation-delay: 0.10s; }
+.cdp-stat-card:nth-child(3) { animation-delay: 0.15s; }
+.cdp-stat-card:nth-child(4) { animation-delay: 0.20s; }
+ 
+/* Cards fade in */
+.cdp-card {
+  animation: cdpFadeUp 0.25s ease both;
+}
+ 
+/* Welcome banner */
+.cdp-banner {
+  animation: cdpFadeUp 0.2s ease both;
 }

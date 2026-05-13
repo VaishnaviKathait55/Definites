@@ -19,17 +19,17 @@ const founders = [
     initials: 'RJ',
     role: 'Advocate',
     name: 'Rishabh Jain',
-    credentials: 'Advance Rulings & Tax Planning',
-    bio: 'Specialist in advance rulings and strategic tax planning, helping clients navigate complex indirect tax frameworks.',
+    credentials: 'Head of Litigation',
+    bio: "Leads the firm's litigation practice before various High Courts, handling writ petitions, customs valuation challenges, anti-dumping matters, ITC disputes, and SCN defense across the full spectrum of indirect tax controversy.",
   },
 ];
 
 const advocates = [
-  { name: 'Abhishek Kathait', role: 'Advocate', focus: 'GST Litigation & Advisory' },
-  { name: 'Divya Sharma', role: 'Advocate', focus: 'Customs Valuation & Compliance' },
-  { name: 'Shubham Jain', role: 'Advocate', focus: 'Audit Defense & Anti-Evasion' },
-  { name: 'Dhriti Dhall', role: 'Advocate', focus: 'Supply Chain Tax Structuring' },
-  { name: 'Ishita Sharma', role: 'Advocate', focus: 'Appellate Representation' },
+  { name: 'Abhishek Kathait', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Advises on GST compliance, multi-state registrations, and statutory interpretation, while representing clients in departmental proceedings, DGGI matters, and appeals through the GST tribunal framework.' },
+  { name: 'Divya Sharma', role: 'Advocate', focus: 'Associate, Customs Disputes and Litigation', bio: 'Advises on import-export structuring, customs valuation disputes, and BIS compliance, with hands-on experience in advance ruling applications and zero-duty planning strategies for trading and manufacturing clients.' },
+  { name: 'Shubham Jain', role: 'Advocate', focus: 'Associate, Customs Disputes and Litigation', bio: 'Handles defense in DRI and SIIB investigations, port-level classification disputes, and appellate proceedings before Higher Forum, with particular focus on anti-evasion and audit defense matters.' },
+  { name: 'Dhriti Dhall', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Structures tax-efficient supply chains and advises on multi-jurisdictional GST issues, transactional models, and complex classification questions for businesses operating across multiple states and sectors' },
+  { name: 'Ishita Sharma', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Represents clients across all stages of GST appellate proceedings, from first appeals through Higher Forums, with focus on advance rulings, preventive audits, and strategic dispute mitigation.' },
 ];
 
 const getInitials = (name) => name.split(' ').map((n) => n[0]).join('');
@@ -75,6 +75,7 @@ const Team = () => {
                   <span className="focus-dot"></span>
                   {advocate.focus}
                 </div>
+                <span className="team-bio">{advocate.bio}</span>
               </div>
             </div>
           ))}
