@@ -4,7 +4,6 @@ import PublicOnlyRoute from './components/PublicOnlyRoute';
 import AccountPage from './pages/AccountPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import AdvocateDashboardPage from './pages/AdvocateDashboardPage';
-import ClientDashboardPage from './pages/ClientDashboardPage';
 import ChangePasswordPage from './pages/ChangePasswordPage';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
