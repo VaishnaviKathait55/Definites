@@ -40,10 +40,10 @@ function App() {
         <Route path="/change-password" element={<ChangePasswordPage />} />
       </Route>
 
-      {/* Client dashboard */}
+      {/* Client dashboard
       <Route element={<ProtectedRoute roles={['client']} />}>
-        <Route path="/client" element={<ClientDashboardPage />} />
-      </Route>
+        <Route path="/client" element={<AccountPage />} />
+      </Route> */}
 
       {/* Advocate dashboard */}
       <Route element={<ProtectedRoute roles={['advocate']} />}>
