@@ -116,7 +116,7 @@ export const changePassword = asyncHandler(async (req, res) => {
     throw new ApiError(400, 'New password must be different from the current password.', 'PASSWORD_REUSE');
   }
 
-  user.passwordHash = await bcrypt.hash(newPassword, 12);
+  user.passwordHash = await bcrypt.hash(newPassword, 10);
   user.mustChangePassword = false;
   user.tempPasswordExpiresAt = null;
   user.passwordResetTokenHash = null;

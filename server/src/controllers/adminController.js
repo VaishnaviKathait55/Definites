@@ -209,7 +209,7 @@ export const approveAccessRequest = asyncHandler(async (req, res) => {
     email: accessRequest.email,
     phone: accessRequest.phone,
     organization: accessRequest.organization,
-    role: 'user',
+    role: 'client',
     passwordHash,
     isActive: true,
     mustChangePassword: true,
