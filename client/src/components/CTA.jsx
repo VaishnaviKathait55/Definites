@@ -41,7 +41,7 @@ const CTA = () => {
               </Link>
             </div>
 
-            <div className="tw-cta-trust">
+            {/* <div className="tw-cta-trust">
               {[
                 'Admin Approved Access',
                 'Seven-Day Temporary Passwords',
@@ -54,7 +54,7 @@ const CTA = () => {
                   {item}
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
         </div>

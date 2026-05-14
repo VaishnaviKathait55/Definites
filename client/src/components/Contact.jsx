@@ -58,7 +58,7 @@ const Contact = () => {
               services in indirect taxation.
             </p>
 
-            <div className="tw-footer-socials">
+            {/* <div className="tw-footer-socials">
 
               <a href="#" aria-label="LinkedIn" className="tw-footer-social-btn">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const Contact = () => {
                   <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.87.24-1.47 1.5-1.47H16.7V4.9c-.3-.04-1.33-.12-2.53-.12-2.5 0-4.22 1.53-4.22 4.34V11H7.1v3h2.85v8z" />
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
 
 
