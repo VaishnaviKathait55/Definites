@@ -1067,12 +1067,21 @@ p {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  overflow: hidden;
   color: var(--color-white);
   font-size: 2rem;
   font-family: var(--font-heading);
   font-weight: 700;
   box-shadow: 0 10px 20px rgba(24, 78, 68, 0.2);
   margin-bottom: 1.5rem;
+}
+
+.founder-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .founder-role {
@@ -1113,8 +1122,10 @@ p {
 .team-bio {
   font-size: 0.92rem;
   line-height: 1.7;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .team-card {
@@ -1149,11 +1160,38 @@ p {
   font-family: var(--font-heading);
   margin-bottom: 1.5rem;
   transition: var(--transition-smooth);
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(24, 78, 68, 0.12);
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .team-card:hover .team-avatar {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  box-shadow: 0 12px 24px rgba(24, 78, 68, 0.18);
+}
+
+.team-position {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.team-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
 }
 
 .team-info h4 {
@@ -1166,7 +1204,7 @@ p {
   font-size: 0.9rem;
   color: var(--text-muted);
   display: block;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .team-focus {
@@ -1174,19 +1212,24 @@ p {
   color: var(--color-primary);
   font-weight: 500;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
+  gap: 0.15rem;
   background-color: var(--color-mint);
-  padding: 6px 14px;
-  border-radius: 50px;
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0 auto 1.25rem;
+  min-height: 4.5rem;
+  width: min(100%, 250px);
+  flex-shrink: 0;
 }
 
-.focus-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
+.team-focus span {
+  display: block;
+  width: 100%;
 }
 
 /* ── Responsive ── */
@@ -1934,6 +1977,10 @@ p {
 
 .nav-auth-btn {
   white-space: nowrap;
+}
+
+.nav-auth-btn-hidden {
+  display: none;
 }
 
 .auth-page-shell {

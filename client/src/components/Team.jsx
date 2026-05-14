@@ -1,38 +1,84 @@
 import React from 'react';
 
+import abhishekImg from '../assets/team/Abhishek Kathait.jpeg';
+import dhritiImg from '../assets/team/Dhriti Dhall.jpeg';
+import divyaImg from '../assets/team/Divya Sharma.jpeg';
+import ishitaImg from '../assets/team/Ishita Khanna.jpeg';
+import mkImg from '../assets/team/MK Srivastava.jpeg';
+import pradeepImg from '../assets/team/Pradeep Kaura.jpeg';
+import rishabhImg from '../assets/team/Rishabh Jain.jpeg';
+import shubhamImg from '../assets/team/Shubham jain.jpeg';
+
 const founders = [
   {
-    initials: 'MK',
-    role: 'Senior Advisor',
+    image: mkImg,
+    imagePosition: 'center 32%',
+    position: 'Senior Advisor',
     name: 'M.K. Srivastava',
-    credentials: 'Retd. Chief Commissioner, CBIC, Customs & GST',
+    title: 'Retd. Chief Commissioner, CBIC, Customs & GST',
     bio: 'Senior Advisor, former IRS officer with 30+ years of expertise in indirect taxation and advisory services.',
   },
   {
-    initials: 'PK',
-    role: 'Managing Head',
+    image: pradeepImg,
+    imagePosition: 'center 34%',
+    position: 'Managing Head',
     name: 'Pradeep Kaura',
-    credentials: 'Ex. IRS, CBIC, Customs & GST',
+    title: 'Ex. IRS, CBIC, Customs & GST',
     bio: "Directing the firm's strategic vision with decades of insider regulatory experience, ensuring every client strategy is bulletproof.",
   },
   {
-    initials: 'RJ',
-    role: 'Advocate',
+    image: rishabhImg,
+    position: 'Head of Litigation',
     name: 'Rishabh Jain',
-    credentials: 'Head of Litigation',
+    title: 'Advocate',
     bio: "Leads the firm's litigation practice before various High Courts, handling writ petitions, customs valuation challenges, anti-dumping matters, ITC disputes, and SCN defense across the full spectrum of indirect tax controversy.",
   },
 ];
 
 const advocates = [
-  { name: 'Abhishek Kathait', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Advises on GST compliance, multi-state registrations, and statutory interpretation, while representing clients in departmental proceedings, DGGI matters, and appeals through the GST tribunal framework.' },
-  { name: 'Divya Sharma', role: 'Advocate', focus: 'Associate, Customs Disputes and Litigation', bio: 'Advises on import-export structuring, customs valuation disputes, and BIS compliance, with hands-on experience in advance ruling applications and zero-duty planning strategies for trading and manufacturing clients.' },
-  { name: 'Shubham Jain', role: 'Advocate', focus: 'Associate, Customs Disputes and Litigation', bio: 'Handles defense in DRI and SIIB investigations, port-level classification disputes, and appellate proceedings before Higher Forum, with particular focus on anti-evasion and audit defense matters.' },
-  { name: 'Dhriti Dhall', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Structures tax-efficient supply chains and advises on multi-jurisdictional GST issues, transactional models, and complex classification questions for businesses operating across multiple states and sectors' },
-  { name: 'Ishita Sharma', role: 'Advocate', focus: 'Associate, GST Litigation & Advisory', bio: 'Represents clients across all stages of GST appellate proceedings, from first appeals through Higher Forums, with focus on advance rulings, preventive audits, and strategic dispute mitigation.' },
+  {
+    image: abhishekImg,
+    name: 'Abhishek Kathait',
+    position: 'Associate',
+    title: 'Advocate',
+    expertise: 'GST Litigation & Advisory',
+    bio: 'Advises on GST compliance, multi-state registrations, and statutory interpretation, while representing clients in departmental proceedings, DGGI matters, and appeals through the GST tribunal framework.',
+  },
+  {
+    image: divyaImg,
+    imagePosition: 'center 34%',
+    name: 'Divya Sharma',
+    position: 'Associate',
+    title: 'Advocate',
+    expertise: 'Customs Disputes and Litigation',
+    bio: 'Advises on import-export structuring, customs valuation disputes, and BIS compliance, with hands-on experience in advance ruling applications and zero-duty planning strategies for trading and manufacturing clients.',
+  },
+  {
+    image: shubhamImg,
+    name: 'Shubham Jain',
+    position: 'Associate',
+    title: 'Advocate',
+    expertise: 'Customs Disputes and Litigation',
+    bio: 'Handles defense in DRI and SIIB investigations, port-level classification disputes, and appellate proceedings before Higher Forum, with particular focus on anti-evasion and audit defense matters.',
+  },
+  {
+    image: dhritiImg,
+    name: 'Dhriti Dhall',
+    position: 'Associate',
+    title: 'Advocate',
+    expertise: 'GST Litigation & Advisory',
+    bio: 'Structures tax-efficient supply chains and advises on multi-jurisdictional GST issues, transactional models, and complex classification questions for businesses operating across multiple states and sectors.',
+  },
+  {
+    image: ishitaImg,
+    imagePosition: 'center 34%',
+    name: 'Ishita Khanna',
+    position: 'Associate',
+    title: 'Advocate',
+    expertise: 'GST Litigation & Advisory',
+    bio: 'Represents clients across all stages of GST appellate proceedings, from first appeals through Higher Forums, with focus on advance rulings, preventive audits, and strategic dispute mitigation.',
+  },
 ];
-
-const getInitials = (name) => name.split(' ').map((n) => n[0]).join('');
 
 const Team = () => {
   return (
@@ -43,129 +89,52 @@ const Team = () => {
       </div>
 
       <div className="team-container">
-
-        {/* Row 1 — Three founders in a horizontal grid */}
         <div className="founders-grid">
-          {founders.map((founder, index) => (
-            <div key={index} className="founder-card">
+          {founders.map((founder) => (
+            <div key={founder.name} className="founder-card">
               <div className="founder-avatar-large">
-                <span>{founder.initials}</span>
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  style={{ objectPosition: founder.imagePosition || 'center' }}
+                />
               </div>
               <div className="founder-details">
-                <span className="founder-role">{founder.role}</span>
+                <span className="founder-role">{founder.position}</span>
                 <h3>{founder.name}</h3>
-                <p className="founder-credentials">{founder.credentials}</p>
+                <p className="founder-credentials">{founder.title}</p>
                 <p className="founder-bio">{founder.bio}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Rows 2 & 3 — Advocates grid */}
         <div className="advocates-grid">
-          {advocates.map((advocate, index) => (
-            <div key={index} className="team-card">
+          {advocates.map((advocate) => (
+            <div key={advocate.name} className="team-card">
               <div className="team-avatar">
-                <span>{getInitials(advocate.name)}</span>
+                <img
+                  src={advocate.image}
+                  alt={advocate.name}
+                  style={{ objectPosition: advocate.imagePosition || 'center' }}
+                />
               </div>
               <div className="team-info">
+                <span className="team-position">{advocate.position}</span>
                 <h4>{advocate.name}</h4>
-                <span className="team-role">{advocate.role}</span>
+                <span className="team-role">{advocate.title}</span>
                 <div className="team-focus">
-                  <span className="focus-dot"></span>
-                  {advocate.focus}
+                  <span>{advocate.position}</span>
+                  <span>{advocate.expertise}</span>
                 </div>
-                <span className="team-bio">{advocate.bio}</span>
+                <p className="team-bio">{advocate.bio}</p>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
 };
 
 export default Team;
-
-
-// import React from 'react';
-
-
-// const advocates = [
-//   // { name: "Rishabh Jain", role: "Advocate", focus: "Advance Rulings & Tax Planning" },
-//   { name: "Abhishek Kathait", role: "Advocate", focus: "GST Litigation & Advisory" },
-//   { name: "Divya Sharma", role: "Advocate", focus: "Customs Valuation & Compliance" },
-//   { name: "Shubham Jain", role: "Advocate", focus: "Audit Defense & Anti-Evasion" },
-//   { name: "Dhriti Dhall", role: "Advocate", focus: "Supply Chain Tax Structuring" },
-//   { name: "Ishita Sharma", role: "Advocate", focus: "Appellate Representation" }
-// ];
-
-
-// const getInitials = (name) => {
-//   return name.split(' ').map(n => n[0]).join('');
-// };
-
-// const Team = () => {
-//   return (
-//     <section id="team" className="team-section fade-up">
-//       <div className="section-header text-center">
-//         <span className="badge">Our Roster</span>
-//         <h2>The Minds Behind the Strategy</h2>
-//       </div>
-
-//       <div className="team-container">
-
-
-//         <div className="founder-spotlight">
-//           <div className="founder-avatar-large">
-//             <span>PK</span>
-//           </div>
-//           <div className="founder-details">
-//             <span className="founder-role">Managing Head</span>
-//             <h3>Pradeep Kaura</h3>
-//             <p className="founder-credentials">Ex. IRS, CBIC, Customs & GST</p>
-//             <p className="founder-bio">
-//               Directing the firm's strategic vision with decades of insider regulatory experience, ensuring every client strategy is bulletproof.
-//             </p>
-//           </div>
-//         </div>
-//         <div className="founder-spotlight">
-//           <div className="founder-avatar-large">
-//             <span>MK</span>
-//           </div>
-//           <div className="founder-details">
-//             <span className="founder-role">Senior Advisor</span>
-//             <h3>M.K. Srivastava</h3>
-//             <p className="founder-credentials">Retd.  Chief Commissioner, CBIC, Customs & GST</p>
-//             <p className="founder-bio">
-//               Senior Advisor, former IRS officer with 30+ years of expertise in indirect taxation and advisory services.
-//             </p>
-//           </div>
-//         </div>
-
-
-//         <div className="advocates-grid">
-//           {advocates.map((advocate, index) => (
-//             <div key={index} className="team-card">
-//               <div className="team-avatar">
-//                 <span>{getInitials(advocate.name)}</span>
-//               </div>
-//               <div className="team-info">
-//                 <h4>{advocate.name}</h4>
-//                 <span className="team-role">{advocate.role}</span>
-//                 <div className="team-focus">
-//                   <span className="focus-dot"></span>
-//                   {advocate.focus}
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Team;

@@ -19,10 +19,10 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-cta">
-        <Link to="/login" className="btn-secondary nav-auth-btn">
+        <Link to="/login" className="btn-secondary nav-auth-btn nav-auth-btn-hidden">
           Portal Login
         </Link>
-        <Link to="/request-access" className="btn-primary nav-auth-btn">
+        <Link to="/request-access" className="btn-primary nav-auth-btn nav-auth-btn-hidden">
           Contact Us
         </Link>
       </div>
