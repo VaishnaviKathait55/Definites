@@ -148,7 +148,7 @@ const Contact = () => {
             </div>
 
 
-            <div className="tw-footer-portal-card">
+            <div className="tw-footer-portal-card tw-footer-section-hidden" aria-hidden="true">
               <div className="tw-footer-portal-title">Client Portal</div>
               <p className="tw-footer-portal-desc">
                 Upload documents, track cases, and review billing.

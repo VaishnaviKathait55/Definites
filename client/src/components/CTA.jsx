@@ -29,7 +29,7 @@ const CTA = () => {
               regulatory insight with practical business strategy.
             </p>
 
-            <div className="tw-cta-buttons">
+            <div className="tw-cta-buttons tw-cta-section-hidden" aria-hidden="true">
               <Link to="/request-access" className="tw-cta-btn-primary">
                 Request Platform Access
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
