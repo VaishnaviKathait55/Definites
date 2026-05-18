@@ -25,18 +25,13 @@ const Disclaimer = () => {
         <div className="disclaimer-body">
           <p>
             The Bar Council of India does not permit advertisement or solicitation by advocates
-            in any form or manner. By accessing this website,{' '}
+            in any form or manner. By accessing,{' '}
             <strong>www.definitesconsultants.com</strong>, you acknowledge and confirm that you are
             seeking information relating to <strong>Definites Consultants</strong> of your own accord
-            and that there has been no form of solicitation, advertisement or inducement by
-            Definites Consultants or its members.
+            and without any solicitation or advertisement.
           </p>
           <p>
-            The content of this website is for informational purposes only and should not be
-            interpreted as soliciting or advertisement. No material/information provided on this
-            website should be construed as legal advice. Definites Consultants shall not be liable
-            for consequences of any action taken by relying on the material/information provided
-            on this website.
+            The content on this website is for informational purposes only and does not constitute legal advice. Definites Consultants is not liable for any reliance placed on the information provided herein.
           </p>
           <p>
             The contents of this website are the intellectual property of Definites Consultants.
