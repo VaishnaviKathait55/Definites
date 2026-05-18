@@ -63,7 +63,7 @@ export function createApp() {
     });
   });
 
-  app.use('/api/access-requests', accessRequestRoutes);
+  app.use('/api/request-access', accessRequestRoutes);
   app.use('/api/admin', adminRoutes);
   app.use('/api/auth', authRoutes);
 

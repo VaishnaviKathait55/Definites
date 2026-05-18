@@ -49,11 +49,6 @@ function RequestAccessPage() {
       eyebrow="Contact Us"
       title="Get in touch with us"
       description="Fill in the form below and our team will get back to you. Each request is reviewed by an administrator."
-      // footer={
-      //   <p>
-      //     Already have credentials? <Link to="/login">Go to portal login</Link>.
-      //   </p>
-      // }
     >
       <form className="auth-form" onSubmit={handleSubmit}>
         <label>

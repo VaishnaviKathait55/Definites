@@ -57,27 +57,6 @@ const Contact = () => {
               We are a specialized law firm providing end-to-end legal and advisory
               services in indirect taxation.
             </p>
-
-            {/* <div className="tw-footer-socials">
-
-              <a href="#" aria-label="LinkedIn" className="tw-footer-social-btn">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3A1.97 1.97 0 103 4.97 1.97 1.97 0 005.25 3zM20.44 13.02c0-3.43-1.83-5.02-4.28-5.02a3.7 3.7 0 00-3.32 1.83V8.5H9.47c.04.88 0 11.5 0 11.5h3.37v-6.42c0-.34.02-.68.12-.92a2.2 2.2 0 012.07-1.48c1.46 0 2.05 1.14 2.05 2.8V20h3.36z" />
-                </svg>
-              </a>
-
-              <a href="#" aria-label="Twitter" className="tw-footer-social-btn">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.26l-4.9-6.42L6.42 22H3.3l7.24-8.28L.8 2h6.42l4.42 5.84zM17.8 20h1.73L6.3 3.9H4.45z" />
-                </svg>
-              </a>
-
-              <a href="#" aria-label="Facebook" className="tw-footer-social-btn">
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.87.24-1.47 1.5-1.47H16.7V4.9c-.3-.04-1.33-.12-2.53-.12-2.5 0-4.22 1.53-4.22 4.34V11H7.1v3h2.85v8z" />
-                </svg>
-              </a>
-            </div> */}
           </div>
 
 
@@ -129,14 +108,6 @@ const Contact = () => {
                   H.No. 541, sector - 12 A,<br />Panchkula
                 </p>
               </div>
-
-
-              {/* <div className="tw-footer-contact-row">
-                <svg className="tw-footer-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a2 2 0 011.95 1.55l.57 2.56a2 2 0 01-.58 1.86l-1.27 1.27a16 16 0 006.59 6.59l1.27-1.27a2 2 0 011.86-.58l2.56.57A2 2 0 0121 15.72V19a2 2 0 01-2 2h-1C9.16 21 3 14.84 3 7V5z" />
-                </svg>
-                <p className="tw-footer-contact-text">+91 99142 20811</p>
-              </div> */}
 
 
               <div className="tw-footer-contact-row">
