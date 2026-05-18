@@ -5,7 +5,10 @@ function AuthPageLayout({ eyebrow, title, description, children, footer }) {
     <div className="auth-page-shell">
       <aside className="auth-side-panel">
         <Link to="/" className="auth-brand">
-          Definites
+          <h2 style={{ margin: 0, lineHeight: 1, color: '#ffff' }}>Definites</h2>
+          <span style={{ fontSize: '0.75rem', color: '#ffff', fontWeight: 400, letterSpacing: '0.02em' }}>
+            <i>From Statute to Strategy</i> 
+          </span>
         </Link>
         <div className="status-pill">{eyebrow}</div>
         <h1>{title}</h1>
