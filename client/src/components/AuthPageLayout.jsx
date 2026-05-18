@@ -12,16 +12,16 @@ function AuthPageLayout({ eyebrow, title, description, children, footer }) {
         <p>{description}</p>
         <div className="auth-side-meta">
           <div>
-            <span>Controlled onboarding</span>
-            <strong>Every user request is reviewed by an administrator.</strong>
+            <span>EXPERT GUIDANCE</span>
+            <strong>Every query is handled by seasoned indirect tax professionals with deep statutory knowledge.</strong>
           </div>
           <div>
-            <span>Temporary credentials</span>
-            <strong>Approved users receive a seven-day temporary password by email.</strong>
+            <span>CONFIDENTIAL & SECURE</span>
+            <strong>Your information and business details are treated with complete discretion and confidentiality.</strong>
           </div>
           <div>
-            <span>First-login security</span>
-            <strong>Password change is mandatory before the account can be used normally.</strong>
+            <span>PROMPT RESPONSE</span>
+            <strong>Our team reviews every inquiry and responds within one business day.</strong>
           </div>
         </div>
       </aside>

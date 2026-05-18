@@ -29,15 +29,15 @@ export const createAccessRequest = asyncHandler(async (req, res) => {
     throw new ApiError(400, 'Please enter a valid email address.', 'INVALID_EMAIL');
   }
 
-  const existingUser = await User.findOne({ email, isActive: true });
-  if (existingUser) {
-    throw new ApiError(409, 'An active account already exists for this email.', 'USER_EXISTS');
-  }
+  // const existingUser = await User.findOne({ email, isActive: true });
+  // if (existingUser) {
+  //   throw new ApiError(409, 'An active account already exists for this email.', 'USER_EXISTS');
+  // }
 
-  const pendingRequest = await AccessRequest.findOne({ email, status: 'pending' });
-  if (pendingRequest) {
-    throw new ApiError(409, 'An access request for this email is already pending review.', 'REQUEST_EXISTS');
-  }
+  // const pendingRequest = await AccessRequest.findOne({ email, status: 'pending' });
+  // if (pendingRequest) {
+  //   throw new ApiError(409, 'An access request for this email is already pending review.', 'REQUEST_EXISTS');
+  // }
 
   const accessRequest = await AccessRequest.create({ name, email, phone, organization, query });
 //   console.log('SMTP CONFIG:', {
