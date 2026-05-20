@@ -55,7 +55,7 @@ async function apiRequest(path, options = {}) {
 }
 
 export function submitAccessRequest(body) {
-  return apiRequest('/access-requests', {
+  return apiRequest('/request-access', {
     method: 'POST',
     auth: false,
     body,
