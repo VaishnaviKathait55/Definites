@@ -1,7 +1,7 @@
 import React from 'react';
 
 import abhishekImg from '../assets/team/Abhishek Kathait.jpeg';
-import dhritiImg from '../assets/team/Dhriti Dhall.jpeg';
+// import dhritiImg from '../assets/team/Dhriti Dhall.jpeg';
 import divyaImg from '../assets/team/Divya Sharma.jpeg';
 import ishitaImg from '../assets/team/Ishita Khanna.jpeg';
 import mkImg from '../assets/team/MK Srivastava.jpeg';
@@ -16,7 +16,8 @@ const founders = [
     position: 'Senior Advisor',
     name: 'M.K. Srivastava',
     title: 'Retd. Chief Commissioner, CBIC, Customs & GST',
-    bio: 'Senior Advisor, former IRS officer with 30+ years of expertise in indirect taxation and advisory services.',
+    bio: "A former Chief Commissioner of CBIC with 30+ years of distinguished service, he provides strategic guidance on Customs, GST, and indirect taxation matters, helping clients resolve complex tax disputes, strengthen compliance and mitigate regulatory risks with confidence.",
+    // 'Senior Advisor, former IRS officer with 30+ years of expertise in indirect taxation and advisory services.',
   },
   {
     image: pradeepImg,
@@ -24,7 +25,8 @@ const founders = [
     position: 'Managing Head',
     name: 'Pradeep Kaura',
     title: 'Ex. IRS, CBIC, Customs & GST',
-    bio: "Directing the firm's strategic vision with decades of insider regulatory experience, ensuring every client strategy is bulletproof.",
+    // bio: "Directing the firm's strategic vision with decades of insider regulatory experience, ensuring every client strategy is bulletproof.",
+    bio:"Directs the firm's strategic vision by leveraging decades of leadership experience in the Indian Revenue Service and deep expertise in Customs and GST, enabling clients to navigate complex regulatory challenges, ensure compliance, and implement practical, risk-aware tax strategies.",
   },
   {
     image: rishabhImg,
@@ -60,14 +62,6 @@ const advocates = [
     title: 'Advocate',
     expertise: 'Customs Disputes and Litigation',
     bio: 'Handles defense in DRI and SIIB investigations, port-level classification disputes, and appellate proceedings before Higher Forum, with particular focus on anti-evasion and audit defense matters.',
-  },
-  {
-    image: dhritiImg,
-    name: 'Dhriti Dhall',
-    position: 'Associate',
-    title: 'Advocate',
-    expertise: 'GST Litigation & Advisory',
-    bio: 'Structures tax-efficient supply chains and advises on multi-jurisdictional GST issues, transactional models, and complex classification questions for businesses operating across multiple states and sectors.',
   },
   {
     image: ishitaImg,
