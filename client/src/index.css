@@ -122,6 +122,21 @@ p {
   color: var(--color-primary);
 }
 
+/* disabled link  */
+
+.nav-links-disabled {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.9rem;
+  opacity: 1;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+
+
+/* --------------------------              HERO SECTION                      ------------------------------------------------------- */
+
 .hero-section {
   display: flex;
   align-items: center;
